@@ -29,7 +29,7 @@ public class MailService {
             messageHelper.setSubject(notificationEmail.getSubject());
             messageHelper.setText(notificationEmail.getBody());
         };
-        try{
+        try {
             mailSender.send(messagePreparator);
             log.info("Activation mail sent!!");
         } catch (MailException e) {
